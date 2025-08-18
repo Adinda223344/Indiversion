@@ -4,16 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDIVERSION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+<!-- Hubungkan ke file CSS eksternal -->
+<link rel="stylesheet" href="countdown.css">
 </head>
 <body>
     <!-- Bagian DO
     Opening and What is Indiversion? --> 
- 
-    
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIVERSION</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="opening.css">
+</head>
+<body>
+<div class="hero">
+    <video autoplay muted loop class="bg-video">
+  <source src="Public-DO/vidio fix.mp4" type="video/mp4">
+</video>
 
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>INDIVERSION</h1>
+        <p class="year">2025</p>
+        <p class="tagline">Chronicles of the Past, Vision of the <span class="highlight">Future</span></p>
+
+
+    </div>
+
+    <div class="btn-container">
+        <a href="page2.html" class="btn-next">Open →</a>
+    </div>
+
+</body>
+</html>
+
+    </div>
 
     <!-- Bagian Dinda
         Hero section --> 
+   <link rel="stylesheet" href="HeroSection.css">
 <div class="slideshow">
     <div class="slide" style="background-image: url('public-Dinda/Foto1.JPG');"></div>
     <div class="slide" style="background-image: url('public-Dinda/Foto2.JPG');"></div>
@@ -32,7 +68,7 @@
 <a href="https://maps.app.goo.gl/dtcFtATXGMCUjX4WA?g_st=ipc" 
      class="btn-alamat">📍 Maps
 </a>
-<a class="pdf-btn" href="public-Dinda/tentatip (1).pdf" target="_blank" class="btn-alamat">
+<a class="pdf-btn" href="public-Dinda/" target="_blank" class="btn-alamat">
   📄 Event Tentative
 </a>
     
@@ -45,7 +81,92 @@
     
     <!-- Bagian Fauziah
     Count down section --> 
-    <div id="countdown"></div>
+
+<!-- Import font Satisfy dari Google Fonts -->
+
+
+
+<!-- Judul dan Sub Judul -->
+<h1>COUNTDOWN</h1>
+<h2>The Indonesian Diversity Exhibition</h2>
+
+<!-- Tampilan Countdown -->
+<div class="countdown">
+    <div class="time-box">
+        <span id="days">00</span>
+        <div class="label">Hari</div>
+    </div>
+    <div class="time-box">
+        <span id="hours">00</span>
+        <div class="label">Jam</div>
+    </div>
+    <div class="time-box">
+        <span id="minutes">00</span>
+        <div class="label">Menit</div>
+    </div>
+    <div class="time-box">
+        <span id="seconds">00</span>
+        <div class="label">Detik</div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out; /* efek halus */
+    }
+</style>
+
+
+<script>
+    // ===== TANGGAL TUJUAN COUNTDOWN =====
+    const targetDate = new Date("Sep 7, 2025 20:00:00").getTime();
+
+    // ===== FUNGSI UPDATE COUNTDOWN =====
+    const countdownFunction = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // Hitung waktu tersisa
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Tampilkan angka ke HTML
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        // Jika countdown sudah selesai
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.querySelector(".countdown").innerHTML = "Waktu Habis!";
+        }
+    }, 1000);
+    // ===== SLIDESHOW BACKGROUND =====
+    const images = [
+        "picture one.JPG",
+        "picture2.JPG",
+        "picture3.JPG"
+    ];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Ganti gambar setiap 5 detik
+    setInterval(changeBackground, 5000);
+    changeBackground(); // panggil pertama kali
+</script>
+
+
+
+
     
 
 
