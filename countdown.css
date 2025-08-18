@@ -1,0 +1,62 @@
+/* ===== STYLE UNTUK BODY ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('picture\ one.JPG'), url(picture2.JPG), url(picture3.JPG)  no-repeat center center/cover; /* Ganti dengan gambar kamu */
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backdrop-filter: brightness(60%);
+}
+body {
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/* ===== JUDUL UTAMA ===== */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ===== SUB JUDUL DENGAN FONT SATISFY ===== */
+h2 {
+    font-family: 'Satisfy', cursive; /* Gunakan font Satisfy */
+    font-size: 48px;
+    color: #ffb84d;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* putih */
+}
+
+/* ===== KONTAINER COUNTDOWN ===== */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ===== KOTAK WAKTU ===== */
+.time-box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* ===== ANGKA WAKTU ===== */
+.time-box span {
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+}
+
+/* ===== LABEL WAKTU (Hari, Jam, Menit, Detik) ===== */
+.label {
+    font-size: 14px;
+    color: #ccc;
+}
