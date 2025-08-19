@@ -78,6 +78,11 @@
     font-size: 0.9rem;
 }
 
+strong {
+color: #ffb84d;
+
+}
+
 .credit-list a {
     color: #ffb84d; /* Warna link sama dengan warna aksen */
     text-decoration: none;
