@@ -2,23 +2,26 @@
 
 .about-section {
     display: flex;
-    align-items: center; /* Jaga agar konten sejajar */
-    padding: 80px 10%; /* Beri jarak atas-bawah dan kiri-kanan */
+    align-items: center; 
+    padding: 80px 10%; 
     gap: 50px;
-    background-color: #fdfbf6; /* Warna latar belakang spesifik */
+    background-color: #fdfbf6; 
 }
 
 .about-text-content {
-    flex: 1; /* Ambil ruang yang tersedia */
+    flex: 1; 
 }
 
 .about-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
-    border-bottom: 2px solid #b47b35;
+    border-bottom: 2px solid  #141309;;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 20px;
+}
+.highlight-yellow {
+  color: #ac9826; 
 }
 
 .about-paragraph {
@@ -33,12 +36,16 @@
 .about-image-grid {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 .about-image-grid img {
     width: 100%;
+    max-width: 350px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
@@ -46,4 +53,17 @@
 
 .about-image-grid img:hover {
     transform: scale(1.05);
+    border-radius: 5px;
 }
+@media (max-width: 768px) {
+  .about-image-grid {
+    grid-template-columns: 1fr; 
+    justify-items: center; 
+  }
+
+  .about-image-grid img {
+    width: 80%;      
+    max-width: 200px; 
+  }
+}
+
