@@ -30,13 +30,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(33, 9, 6, 0.4); /* Merah tipis */
+    background: rgba(33, 9, 6, 0.4);
     z-index: -1;
 }
 
 .hero-content {
     z-index: 1;
-    margin-bottom: auto; /* Biar di tengah */
+    margin-bottom: auto; 
     margin-top: auto;
 }
 
